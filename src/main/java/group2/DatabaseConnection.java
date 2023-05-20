@@ -21,8 +21,8 @@ public class DatabaseConnection extends ActionSupport implements ModelDriven<Fli
         Connection conn = null;
         /*----------------------Connecting to DB----------------------*/
         try {
-            String URL = "jdbc:mysql://localhost/test";
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            String URL = "jdbc:mariadb://localhost:3306/FlightPub";
+            Class.forName("com.mariadb.jdbc.Driver");
             conn = DriverManager.getConnection(URL, "root", "root");
             String sql = "SELECT AirlineCode, AirlineName, CountryCode3 FROM Airlines;";
             PreparedStatement ps = conn.prepareStatement(sql);
