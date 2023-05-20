@@ -13,8 +13,11 @@
 </head>
 <body>
 <h1>Airlines</h1>
-Airline Code:<s:property value="airlineCode"/><br>
-Airline Name:<s:property value="airlineName"/><br>
-Country Code 3:<s:property value="countryCode3"/><br>
+<s:iterator value="airlines">
+    Airline Code: <s:property value="airlineCode"/><br>
+    Airline Name: <s:property value="airlineName"/><br>
+    Country Code 3: <s:property value="countryCode3"/><br>
+    <br>
+</s:iterator>
 </body>
 </html>
