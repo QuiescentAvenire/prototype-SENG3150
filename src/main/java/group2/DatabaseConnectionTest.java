@@ -21,12 +21,13 @@ public class DatabaseConnectionTest extends ActionSupport {
         airlines = new ArrayList<>();
 
         try {
-            String URL = "jdbc:mariadb://localhost:3306/FlightPub";
+            String URL = "jdbc:mariadb://localhost:3306/flightpub";
             String username = "root";
             String password = "root";
 
             Class.forName("org.mariadb.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(URL, username, password);
+//            Connection conn = DriverManager.getConnection(URL, username, password);
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/DB?user=root&password=root");
 
             String sql = "SELECT AirlineCode, AirlineName, countryCode3 FROM Airlines";
             PreparedStatement ps = conn.prepareStatement(sql);

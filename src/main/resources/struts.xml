@@ -15,7 +15,7 @@
         </action>
 
         <!--airlines-->
-        <action name="airlines" class="group2.DatabaseConnectionTest" method="execute">
+        <action name="airlines" class="group2.DatabaseConnectionTest">
             <result name="success">/WEB-INF/views/airlines.jsp</result>
             <result name="error">/WEB-INF/views/error.jsp</result>
         </action>
